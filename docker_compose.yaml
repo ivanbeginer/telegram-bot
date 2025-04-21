@@ -1,0 +1,15 @@
+services:
+  db:
+    image:
+      postgres:17
+    environment:
+      POSTGRES_USER=postgres
+      POSTGRES_PASSWORD=228666
+      POSTGRES_DB=bot_db
+    ports:
+      - '5432:5432'
+    networks:
+      -backend
+
+  bot_app:
+
