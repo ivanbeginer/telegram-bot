@@ -1,3 +1,5 @@
-/settings/.envs/
-poetry.lock
-pyproject.toml
+JetBrains
+Python
+venv
+.env
+.idea/
