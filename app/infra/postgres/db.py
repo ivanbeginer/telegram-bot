@@ -1,4 +1,4 @@
-import asyncpg
+
 from pydantic import Secret, PostgresDsn
 from contextlib import asynccontextmanager
 from collections.abc import AsyncGenerator

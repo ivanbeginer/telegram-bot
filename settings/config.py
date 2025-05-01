@@ -8,7 +8,7 @@ class AppSettings(BaseSettings):
 
     TELEGRAM_API_KEY: SecretStr = SecretStr("secret")
     LOG_LEVEL: str = 'INFO'
-
+    
     POSTGRES_DSN: Secret[PostgresDsn] = Secret('secret')
     ADMIN_INTERFACE_PORT: int = 8001
     ADMIN_SECRET_KEY: SecretStr = SecretStr('secretkey')
