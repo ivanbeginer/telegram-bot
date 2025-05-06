@@ -3,7 +3,7 @@ stages:
 build:
   stage: build
   tags:
-    - tg-shell
+    - tg-docker
   image:
     name: grc.io/kaniko-project/executor:v1.6.0-debug
     entrypoint: [""]
