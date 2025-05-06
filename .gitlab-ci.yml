@@ -8,7 +8,7 @@ build:
     name: python:3.12
     entrypoint: [""]
   script:
-    - mkdir -p /kaniko/.docker
+    - if (!(Test-Path "/kaniko/.docker" -PathType Container)) { mkdir "/kaniko/.docker" }
     - $auth = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes("json_key:${CI_REGISTRY_KEY}"))
     - echo "{\"auths\":{\"$CI_REGISTRY\":{\"auth\":\"$auth\"}}}" > /kaniko/.docker/config.json
     - >-
