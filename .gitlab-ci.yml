@@ -5,7 +5,7 @@ build:
   tags:
     - tg-shell
   image:
-    name: python:3.12
+    name: grc.io/kaniko-project/executor:v1.6.0-debug
     entrypoint: [""]
   script:
     - if (!(Test-Path "/kaniko/.docker" -PathType Container)) { mkdir "/kaniko/.docker" }
