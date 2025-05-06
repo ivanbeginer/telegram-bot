@@ -3,7 +3,7 @@ stages:
 build:
   stage: build
   image:
-    name: grc.io/kaniko-project/executor:v1.6.0-debug
+    name: python:3.12
     entrypoint: [""]
   script:
     - mkdir -p /kaniko/.docker
@@ -14,3 +14,4 @@ build:
       --context "${CI_PROJECT_DIR}"
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination "${CI_REGISTRY}/${CI_PROJECT_PATH}:${CI_COMMIT_SHORT_SHA}"
+      
