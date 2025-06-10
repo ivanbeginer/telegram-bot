@@ -1,6 +1,7 @@
-JetBrains
-Python
-venv
-.env
+
 .idea/
+
 __pycache__
+venv/
+.env
+
